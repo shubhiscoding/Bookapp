@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bookapp</string>
+    <string name="bookview">bookview</string>
+    <string name="atomic_habit_descript">"Atomic Habits" by James Clear is a transformative guide to achieving remarkable results through the power of tiny changes. This New York Times bestseller explores the science of habits, offering practical insights and real-life stories. Clear advocates for the compounding impact of small, consistent changes and provides actionable strategies to build positive habits and break negative ones. Focusing on systems rather than goals, the book serves as a roadmap for personal and professional growth. With a compelling blend of science and storytelling, "Atomic Habits" is a must-read for those seeking lasting change and improved productivity in all aspects of life.</string>
+    <string name="borrow_book_button">Borrow Book</string>
+    <string name="bookdescview" />
+    <string name="booksdescview">booksdescview</string>
+</resources>
