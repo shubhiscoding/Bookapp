@@ -7,8 +7,8 @@ import com.example.bookapp.databinding.ActivityDetailsBinding
 import com.example.bookapp.databinding.ActivityMainBinding
 
 class DetailsActivity : AppCompatActivity() {
-    val activity = this
-    lateinit var binding: ActivityDetailsBinding
+    private val activity = this
+    private lateinit var binding: ActivityDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailsBinding.inflate(layoutInflater)

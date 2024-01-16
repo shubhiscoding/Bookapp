@@ -19,7 +19,7 @@ class BooksAdapter(val list:ArrayList<BooksModel>, val context: Context):Recycle
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val model = list[position]
         holder.binding.apply {
-            imageView2.setImageResource(model.image)
+            imageView2.setImageResource(model.image!!)
             cardView.setOnClickListener {
                 val intent = Intent()
                 intent.putExtra("book_title", model.title)

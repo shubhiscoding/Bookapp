@@ -5,4 +5,8 @@
     <string name="borrow_book_button">Borrow Book</string>
     <string name="bookdescview" />
     <string name="booksdescview">booksdescview</string>
+    <string name="add_a_book">Add a Book</string>
+    <string name="upload">Upload</string>
+    <string name="book_tittle">Book Tittle</string>
+    <string name="book_description">Book Description</string>
 </resources>
