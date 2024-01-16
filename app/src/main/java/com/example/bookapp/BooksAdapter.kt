@@ -21,12 +21,12 @@ class BooksAdapter(val list:ArrayList<BooksModel>, val context: Context):Recycle
         holder.binding.apply {
             imageView2.setImageResource(model.image!!)
             cardView.setOnClickListener {
-                val intent = Intent()
+                val intent = Intent(context, DetailsActivity::class.java)
                 intent.putExtra("book_title", model.title)
                 intent.putExtra("book_desc", model.description)
                 intent.putExtra("contact", model.contact)
                 intent.putExtra("book_image", model.image)
-                intent.setClass(context, DetailsActivity::class.java)
+                intent.putExtra("maxDays", model.maxBorrow)
                 context.startActivity(intent)
             }
         }

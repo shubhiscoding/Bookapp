@@ -9,4 +9,7 @@
     <string name="upload">Upload</string>
     <string name="book_tittle">Book Tittle</string>
     <string name="book_description">Book Description</string>
+    <string name="your_contact_detail">Your contact detail</string>
+    <string name="numberofdays">Number Of Days to be issued for</string>
+    <string name="_0">0</string>
 </resources>

@@ -17,6 +17,7 @@ class DetailsActivity : AppCompatActivity() {
         val bookDesc = intent.getStringExtra("book_desc").toString()
         val contact = intent.getStringExtra("contact").toString()
         val bookImage = intent.getIntExtra("book_image", 0)
+        val days = intent.getIntExtra("maxDays", 0)
 
         binding.apply {
             mBookTitle.text = bookTitle
@@ -26,6 +27,7 @@ class DetailsActivity : AppCompatActivity() {
             mReadBookBtn.setOnClickListener {
                 val intent = Intent()
                 intent.putExtra("contact", contact)
+                intent.putExtra("maxDays", days)
                 intent.setClass(activity, ContactActivity::class.java)
                 startActivity(intent)
             }

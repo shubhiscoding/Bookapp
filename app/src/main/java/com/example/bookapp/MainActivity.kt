@@ -23,11 +23,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.apply {
             mRecyclerViewHome.adapter = adapter
-            list.add(BooksModel(R.drawable.book_1, "Book_Title", "Book_description", "Owner's_contact"))
-            list.add(BooksModel(R.drawable.book_2, "Book_Title", "Book_description", "Owner's_contact"))
-            list.add(BooksModel(R.drawable.book_3, "Book_Title", "Book_description", "Owner's_contact"))
-            list.add(BooksModel(R.drawable.book_4, "Book_Title", "Book_description", "Owner's_contact"))
-            list.add(BooksModel(R.drawable.book_5, "Book_Title", "Book_description", "Owner's_contact"))
+            list.add(BooksModel(R.drawable.book_1, "Book_Title", "Book_description", "Owner's_contact", 5))
+            list.add(BooksModel(R.drawable.book_2, "Book_Title", "Book_description", "Owner's_contact", 5))
+            list.add(BooksModel(R.drawable.book_3, "Book_Title", "Book_description", "Owner's_contact", 5))
+            list.add(BooksModel(R.drawable.book_4, "Book_Title", "Book_description", "Owner's_contact", 5))
+            list.add(BooksModel(R.drawable.book_5, "Book_Title", "Book_description", "Owner's_contact", 5))
         }
         extendedFloatingActionButton = findViewById(R.id.search)
         extendedFloatingActionButton.setOnClickListener {
@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
             // Retrieve data from ShareABook activity
             val title = data?.getStringExtra("title")
             val desc = data?.getStringExtra("desc")
-
+            val contac = data?.getStringExtra("contact")
             // Add a new book to the list
-            list.add(BooksModel(R.drawable.download, title.toString(), desc.toString(), "Owner's_contact"))
+            list.add(BooksModel(R.drawable.download, title.toString(), desc.toString(), contac.toString(), 5))
 
             // Notify the adapter that the data has changed
             adapter.notifyDataSetChanged()

@@ -14,6 +14,7 @@ class ShareABook : AppCompatActivity() {
     private lateinit var binding: ActivityShareAbookBinding
     private lateinit var editTextTitle: TextInputEditText
     private lateinit var editTextDesc: TextInputEditText
+    private lateinit var editText: EditText
     private lateinit var buttonUpload: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,16 +25,17 @@ class ShareABook : AppCompatActivity() {
         editTextTitle = findViewById(R.id.Book_Tittle)
         editTextDesc = findViewById(R.id.BookDesc)
         buttonUpload = findViewById(R.id.upload)
-
+        editText = findViewById(R.id.owner_contact)
         buttonUpload.setOnClickListener {
             val title = editTextTitle.text.toString()
             val desc = editTextDesc.text.toString()
-
+            val contact = editText.text.toString()
             if (title.isNotEmpty() && desc.isNotEmpty()) {
                 // Send the data back to MainActivity
                 val resultIntent = Intent()
                 resultIntent.putExtra("title", title)
                 resultIntent.putExtra("desc", desc)
+                resultIntent.putExtra("contact", contact)
                 setResult(RESULT_OK, resultIntent)
                 finish()
             } else {
