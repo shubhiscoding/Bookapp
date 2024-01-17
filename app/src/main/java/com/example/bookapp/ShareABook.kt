@@ -32,17 +32,27 @@ class ShareABook : AppCompatActivity() {
             val title = editTextTitle.text.toString()
             val desc = editTextDesc.text.toString()
             val contact = editText.text.toString()
-            val days = editTextdays.text.toString().toInt()
-            if (title!="" && desc!="" && contact!="" && days>0) {
-                // Send the data back to MainActivity
-                Toast.makeText(this, "Successfully Created", Toast.LENGTH_LONG).show()
-                val resultIntent = Intent()
-                resultIntent.putExtra("title", title)
-                resultIntent.putExtra("desc", desc)
-                resultIntent.putExtra("contact", contact)
-                resultIntent.putExtra("maxDays", days)
-                setResult(RESULT_OK, resultIntent)
-                finish()
+            val days = editTextdays.text.toString()
+
+            if (title.isNotBlank() && desc.isNotBlank() && contact.isNotBlank() && days.isNotBlank()) {
+                try {
+                    val daysInt = days.toInt()
+                    if (daysInt > 0) {
+                        // Send the data back to MainActivity
+                        Toast.makeText(this, "Successfully Created", Toast.LENGTH_LONG).show()
+                        val resultIntent = Intent()
+                        resultIntent.putExtra("title", title)
+                        resultIntent.putExtra("desc", desc)
+                        resultIntent.putExtra("contact", contact)
+                        resultIntent.putExtra("maxDays", daysInt)
+                        setResult(RESULT_OK, resultIntent)
+                        finish()
+                    } else {
+                        Toast.makeText(this, "Days should be greater than 0", Toast.LENGTH_LONG).show()
+                    }
+                } catch (e: NumberFormatException) {
+                    Toast.makeText(this, "Invalid days format", Toast.LENGTH_LONG).show()
+                }
             } else {
                 Toast.makeText(this, "Fill All the fields", Toast.LENGTH_LONG).show()
             }

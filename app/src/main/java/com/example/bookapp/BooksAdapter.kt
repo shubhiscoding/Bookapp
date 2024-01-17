@@ -22,6 +22,9 @@ class BooksAdapter(val list:ArrayList<BooksModel>, val context: Context):Recycle
             imageView2.setImageResource(model.image!!)
             titletext.text = model.title
             descriptionview.text = model.description
+            if(model.slctday>0){
+                availableMain.text = "Available in ${model.slctday} days"
+            }
             viewbox.setOnClickListener {
                 val intent = Intent(context, DetailsActivity::class.java)
                 intent.putExtra("book_title", model.title)

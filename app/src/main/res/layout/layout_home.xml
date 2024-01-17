@@ -72,17 +72,26 @@
         android:id="@+id/descriptionview"
         android:layout_width="189dp"
         android:layout_height="158dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:ellipsize="end"
         android:maxLines="6"
         android:text="TextView"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/titletext" />
+
+    <TextView
+        android:id="@+id/availableMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/available"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
