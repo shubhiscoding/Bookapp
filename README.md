@@ -1,0 +1,5 @@
+This is a book sharing app's frontend, built using Kotlin, offers a user-friendly interface for a seamless book-sharing experience. The application is designed with key features to facilitate easy book management within a community. Users can effortlessly add books they're willing to share.
+
+The app supports the borrowing process, allowing users to request books from the available collection. A thoughtful addition to the borrowing feature is the display of availability status. If a book is currently borrowed, the app provides information on when it will be available again. Conversely, if a book is ready for borrowing, it is marked as "available."
+
+While the frontend lacks a database, it excels in providing a clear and intuitive user interface for managing the sharing and borrowing of books. Users can easily navigate through the app, add their books to the inventory, and make informed decisions about borrowing based on the availability status. The simplicity of the design ensures a smooth user experience, making it a valuable tool for promoting book sharing within the community.
