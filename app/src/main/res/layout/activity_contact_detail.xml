@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B6ECEC"
+    android:background="#2A2F2F"
     tools:context=".ContactActivity">
 
     <Button
@@ -24,6 +24,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="-3dp"
         android:text="(in Days)"
+        android:textColor="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -34,7 +35,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
-        android:textColor="@color/black"
+        android:textColor="@color/gray"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -45,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Do take Care of it!!"
+        android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +61,7 @@
         android:fontFamily="@font/roboto_bold"
         android:shadowColor="@color/black"
         android:text="Contact Details"
-        android:textColor="@color/black"
+        android:textColor="@color/gray"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -71,21 +73,22 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="224dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Borrowing Period:"
-        android:textColor="@color/black"
+        android:text="@string/borrowing_period"
+        android:textColor="@color/gray"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <NumberPicker
         android:id="@+id/numberPicker"
-        android:layout_width="147dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
         android:layout_marginBottom="84dp"
-        android:background="#6D4040"
-        android:backgroundTint="#784242"
-        android:textColor="@color/gray"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/confrimbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4"

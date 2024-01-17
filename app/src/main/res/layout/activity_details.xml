@@ -72,7 +72,7 @@
         android:ellipsize="end"
         android:fontFamily="@font/roboto_bold"
         android:maxLines="1"
-        android:text="Atomic Habit, Ayein Beagin begainbhaloo"
+        android:text="Atomic Habit"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

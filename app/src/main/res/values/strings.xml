@@ -7,11 +7,13 @@
     <string name="booksdescview">booksdescview</string>
     <string name="add_a_book">Add a Book</string>
     <string name="upload">Upload</string>
-    <string name="book_tittle">Book Tittle</string>
+    <string name="book_tittle">Book Title</string>
     <string name="book_description">Book Description</string>
     <string name="your_contact_detail">Your contact detail</string>
     <string name="numberofdays">Number Of Days to be issued for</string>
     <string name="_0">0</string>
     <string name="borrowed_book">Borrowed Book</string>
     <string name="available">Available</string>
+    <string name="rich_dad_poor">\"Rich Dad Poor Dad\" by Robert T. Kiyosaki contrasts traditional financial advice with unconventional teachings from his best friend\'s father. The book challenges conventional beliefs about money, emphasizing financial literacy, asset acquisition, and passive income. Kiyosaki\'s perspective inspires a mindset shift towards entrepreneurship and wealth creation, making it a timeless guide for financial independence.</string>
+    <string name="borrowing_period">Borrowing Period:</string>
 </resources>

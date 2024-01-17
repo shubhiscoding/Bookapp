@@ -33,8 +33,9 @@ class ShareABook : AppCompatActivity() {
             val desc = editTextDesc.text.toString()
             val contact = editText.text.toString()
             val days = editTextdays.text.toString().toInt()
-            if (title.isNotEmpty() && desc.isNotEmpty() && contact.isNotEmpty() && editTextdays.text.isNotEmpty()) {
+            if (title!="" && desc!="" && contact!="" && days>0) {
                 // Send the data back to MainActivity
+                Toast.makeText(this, "Successfully Created", Toast.LENGTH_LONG).show()
                 val resultIntent = Intent()
                 resultIntent.putExtra("title", title)
                 resultIntent.putExtra("desc", desc)
@@ -43,7 +44,7 @@ class ShareABook : AppCompatActivity() {
                 setResult(RESULT_OK, resultIntent)
                 finish()
             } else {
-                Toast.makeText(this, "Bakchodi maat karr", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Fill All the fields", Toast.LENGTH_LONG).show()
             }
         }
     }

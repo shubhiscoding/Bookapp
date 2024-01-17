@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             mRecyclerViewHome.adapter = adapter
             if(count<4){
-                list.add(BooksModel(R.drawable.book_1, "Rich Dad Poor Dad", "Book_description", "Owner's_contact", 5, false, count+1,0))
+                list.add(BooksModel(R.drawable.book_1, "Rich Dad Poor Dad", getString(R.string.rich_dad_poor), "Owner's_contact", 5, false, count+1,0))
                 count+=1
                 list.add(BooksModel(R.drawable.book_2, "Atomic Habit", getString(R.string.atomic_habit_descript), "Owner's_contact", 5, false, count+1,0))
                 count+=1
