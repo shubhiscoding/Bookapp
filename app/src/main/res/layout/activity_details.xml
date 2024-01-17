@@ -58,6 +58,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.5" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -79,20 +80,37 @@
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <TextView
-        android:id="@+id/mBookDesc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/roboto"
-        android:text="@string/atomic_habit_descript"
-        android:textColor="@color/black"
+        android:id="@+id/mAvailable"
+        android:layout_width="336dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/available"
+        android:textColor="@android:color/holo_green_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/mReadBookBtn"
-        app:layout_constraintEnd_toEndOf="@id/mBookTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mBookTitle" />
+
+    <TextView
+        android:id="@+id/mBookDesc"
+        android:layout_width="330dp"
+        android:layout_height="281dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto"
+        android:gravity="start|center_horizontal"
+        android:maxLines="10"
+        android:text="@string/atomic_habit_descript"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/mReadBookBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mBookTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mAvailable" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/mReadBookBtn"
@@ -111,4 +129,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="@color/black" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

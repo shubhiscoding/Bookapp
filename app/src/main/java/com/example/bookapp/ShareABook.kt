@@ -16,6 +16,7 @@ class ShareABook : AppCompatActivity() {
     private lateinit var editTextDesc: TextInputEditText
     private lateinit var editText: EditText
     private lateinit var buttonUpload: Button
+    private lateinit var editTextdays: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,20 +27,23 @@ class ShareABook : AppCompatActivity() {
         editTextDesc = findViewById(R.id.BookDesc)
         buttonUpload = findViewById(R.id.upload)
         editText = findViewById(R.id.owner_contact)
+        editTextdays = findViewById(R.id.editTextNumber2)
         buttonUpload.setOnClickListener {
             val title = editTextTitle.text.toString()
             val desc = editTextDesc.text.toString()
             val contact = editText.text.toString()
-            if (title.isNotEmpty() && desc.isNotEmpty()) {
+            val days = editTextdays.text.toString().toInt()
+            if (title.isNotEmpty() && desc.isNotEmpty() && contact.isNotEmpty() && editTextdays.text.isNotEmpty()) {
                 // Send the data back to MainActivity
                 val resultIntent = Intent()
                 resultIntent.putExtra("title", title)
                 resultIntent.putExtra("desc", desc)
                 resultIntent.putExtra("contact", contact)
+                resultIntent.putExtra("maxDays", days)
                 setResult(RESULT_OK, resultIntent)
                 finish()
             } else {
-                Toast.makeText(this, "Fill all the fields", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Bakchodi maat karr", Toast.LENGTH_LONG).show()
             }
         }
     }

@@ -6,4 +6,7 @@ data class BooksModel (
     val description: String,
     val contact: String,
     val maxBorrow: Int,
+    var isBorrowed: Boolean,
+    var count:Int,
+    var slctday:Int,
 )

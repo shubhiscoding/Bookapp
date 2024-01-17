@@ -20,13 +20,18 @@ class BooksAdapter(val list:ArrayList<BooksModel>, val context: Context):Recycle
         val model = list[position]
         holder.binding.apply {
             imageView2.setImageResource(model.image!!)
-            cardView.setOnClickListener {
+            titletext.text = model.title
+            descriptionview.text = model.description
+            viewbox.setOnClickListener {
                 val intent = Intent(context, DetailsActivity::class.java)
                 intent.putExtra("book_title", model.title)
                 intent.putExtra("book_desc", model.description)
                 intent.putExtra("contact", model.contact)
                 intent.putExtra("book_image", model.image)
                 intent.putExtra("maxDays", model.maxBorrow)
+                intent.putExtra("index", model.count)
+                intent.putExtra("isBorrowed", model.isBorrowed)
+                intent.putExtra("slctday", model.slctday)
                 context.startActivity(intent)
             }
         }

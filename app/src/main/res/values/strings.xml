@@ -12,4 +12,6 @@
     <string name="your_contact_detail">Your contact detail</string>
     <string name="numberofdays">Number Of Days to be issued for</string>
     <string name="_0">0</string>
+    <string name="borrowed_book">Borrowed Book</string>
+    <string name="available">Available</string>
 </resources>
